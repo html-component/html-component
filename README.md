@@ -1,2 +1,5 @@
 # html-component
- Easy and Light Web Component
+
+Easy and Light Web Component
+
+[See Documents!](./docs)
