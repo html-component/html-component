@@ -2,7 +2,8 @@
 
 ## `c-template`
 
-Define Component
+컴포넌트를 정의합니다.  
+해당 컴포넌트는 `c:name`에 정의된 이름을 가지고 생성됩니다.
 
 ```html
 <c-template c:name="my-component">

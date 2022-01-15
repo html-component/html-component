@@ -2,7 +2,7 @@
 
 ## `Insert(target: string, data: object): void`
 
-Insert Data into a HTML-Element.
+`#target`에 `data`를 삽입합니다.
 
 ```html
 <div id="greet">Hello, {{name}}!</div>
@@ -13,3 +13,5 @@ Insert Data into a HTML-Element.
 ```
 
 ## `Each(target: string, data: object[]): void`
+
+`<c-each />`태그와 함께 사용됩니다.
