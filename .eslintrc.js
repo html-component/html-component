@@ -26,5 +26,6 @@ module.exports = {
     'comma-dangle': 'off',
     'no-useless-constructor': 'off',
     'max-classes-per-file': 'off',
+    'no-param-reassign': 'off',
   },
 };

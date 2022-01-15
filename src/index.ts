@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import HTMLMap from '../lib/components/c-each';
 import HTMLTemplate from '../lib/components/c-template';
 
