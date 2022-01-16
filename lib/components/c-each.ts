@@ -1,5 +1,5 @@
-export default class HTMLMap extends HTMLElement {
-  constructor() {
-    super();
-  }
+// INIT
+
+export default function Each() {
+  return '';
 }
