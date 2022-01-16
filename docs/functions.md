@@ -21,3 +21,13 @@
 `componentName`라는 이름을 가진 컴포넌트를 생성합니다.  
 `HTML`: 컴포넌트의 코드를 나타냅니다.  
 `inner`: 컴포넌트의 내부에 삽입할지 여부를 결정합니다.
+
+```js
+new ComponentBase('my-component', '<h1>Hello, world!</h1>', true);
+```
+
+```html
+<my-component></my-component>
+
+<!--<my-component><h1>Hello, World!</h1></my-component>-->
+```
