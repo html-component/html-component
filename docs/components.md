@@ -50,3 +50,29 @@ Each From List
 | c:return-i | 해당 element의 index |
 
 [result](https://html-component.github.io/example/map)
+
+## `c-fetch`
+
+Fetch From Server
+
+```html
+<c-fetch id="users" src="https://jsonplaceholder.typicode.com/users">loading</c-fetch>
+
+<script>
+  ComponentFetch('users', function (element, response) {
+    if (response.ok) {
+      response.json().then(function (data) {
+        element.innerHTML = data
+          .map(function (user) {
+            return `<div>${user.name}</div>`;
+          })
+          .join('');
+      });
+    } else {
+      element.innerHTML = 'error: ' + response.status;
+    }
+  });
+</script>
+```
+
+### `ComponentFetch(id: string, callback: (element: HTMLElement, response: Response) => void): void`
