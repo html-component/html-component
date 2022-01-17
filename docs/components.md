@@ -33,7 +33,7 @@ Each From List
 
 ```html
 <c-each id="cats" c:return-v="cat" c:return-i="i">
-  <li>{{i}}. {{cat}}</li>
+  <li>{{i+1}}. {{cat}}</li>
 </c-each>
 
 <script>
