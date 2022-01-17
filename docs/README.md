@@ -3,7 +3,7 @@
 - [Components](./components.md)
 - [Functions](./functions.md)
 
-## Useage
+## 다운로드(1)
 
 head 태그에 원하는 스크립트를 추가해주세요.
 
@@ -23,3 +23,7 @@ head 태그에 원하는 스크립트를 추가해주세요.
   src="https://raw.githubusercontent.com/html-component/html-component/main/dist/component.js"
 ></script>
 ```
+
+### html-component@x.y.z
+
+[원하는 릴리즈](https://github.com/html-component/html-component/releases)를 다운받아 `dist` 폴더와 연결해주세요.
