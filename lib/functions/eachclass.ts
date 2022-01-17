@@ -1,13 +1,16 @@
 export default class ComponentEach {
+  public template;
+
   public element;
 
   constructor(target: string) {
     this.element = document.getElementById(target);
+    this.template = this.element.innerHTML;
   }
 
   each(value: any) {
     const { element } = this;
-    const html = element.innerHTML;
+    const html = this.template;
 
     const returnValue = element.getAttribute('c:return-v');
     const returnIndex = element.getAttribute('c:return-i');
