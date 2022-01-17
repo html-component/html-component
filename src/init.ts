@@ -1,5 +1,6 @@
 import ComponentBase from '../lib/base/component';
 import FuncEach from '../lib/functions/each';
+import Fetch from '../lib/functions/fetch';
 import Insert from '../lib/functions/insert';
 import whenLoad from '../lib/functions/load';
 
@@ -8,4 +9,5 @@ import whenLoad from '../lib/functions/load';
 (window as any).Each = FuncEach;
 (window as any).WhenLoad = whenLoad;
 (window as any).Insert = Insert;
+(window as any).ComponentFetch = Fetch;
 (window as any).ComponentBase = ComponentBase;
