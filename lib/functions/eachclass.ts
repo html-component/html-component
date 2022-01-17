@@ -25,6 +25,6 @@ export default class ComponentEach {
       ResultValue += newHtml2;
     });
 
-    element.outerHTML = ResultValue;
+    element.innerHTML = ResultValue;
   }
 }
