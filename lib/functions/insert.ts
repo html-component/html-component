@@ -1,12 +1,8 @@
+import insertData from '../utils/insert';
+
 const Insert = (target, value: object) => {
   const element = document.getElementById(target);
-  let html = element.innerHTML;
-
-  Object.keys(value).forEach((key) => {
-    html = html.replace(new RegExp(`{{${key}}}`, 'g'), value[key]);
-  });
-
-  element.innerHTML = html;
+  element.innerHTML = insertData(element.innerHTML, value);
 };
 
 export default Insert;

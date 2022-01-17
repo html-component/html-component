@@ -1,3 +1,5 @@
+import insertData from '../utils/insert';
+
 export default class ComponentEach {
   public template;
 
@@ -20,9 +22,12 @@ export default class ComponentEach {
     element.innerHTML = '';
 
     value.forEach((item, index) => {
-      const newHtml = html.replace(new RegExp(`{{${returnValue}}}`, 'g'), item);
-      const newHtml2 = newHtml.replace(new RegExp(`{{${returnIndex}}}`, 'g'), index);
-      ResultValue += newHtml2;
+      const data = {};
+
+      (data as any)[returnValue] = item;
+      (data as any)[returnIndex] = index;
+
+      ResultValue += insertData(html, data);
     });
 
     element.innerHTML = ResultValue;

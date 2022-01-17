@@ -1,4 +1,5 @@
 import { NewComponent } from '../types';
+import insertData from '../utils/insert';
 
 export default class HTMLTemplate extends HTMLElement {
   constructor() {
@@ -19,9 +20,14 @@ export default class HTMLTemplate extends HTMLElement {
 
             let { html } = data;
 
+            const dts = {} as any;
+
             data.props.forEach((prop) => {
-              html = html.replace(new RegExp(`{{${prop}}}`, 'g'), this.getAttribute(`props:${prop}`));
+              const value = this.getAttribute(`props:${prop}`);
+              dts[prop] = value;
             });
+
+            html = insertData(html, dts);
 
             this.outerHTML = html;
           }
