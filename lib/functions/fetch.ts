@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
-const Fetch = (target: string, callback) => {
+
+const Fetch = (target: string, callback: (element: HTMLElement, response: Response) => void) => {
   const element = document.getElementById(target);
   const src = element.getAttribute('src');
 
