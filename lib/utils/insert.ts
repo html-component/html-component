@@ -4,7 +4,7 @@ import customEval from './eval';
 export default function insertData(source: string, data: object) {
   const parse = (str: string) => str.match(/\{\{(.*?)\}\}/g);
 
-  parse(source).forEach((val) => {
+  parse(source)?.forEach((val) => {
     let vars = '';
     Object.keys(data).forEach((key) => {
       vars += `const ${key} = ${JSON.stringify(data[key])};`;
