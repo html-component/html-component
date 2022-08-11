@@ -7,7 +7,7 @@ export default class HTMLTemplate extends HTMLElement {
 
     const data: NewComponent = {
       name: this.getprop('c:name'),
-      props: this.getprop('c:props').split(' ') || [],
+      props: (this.getprop('c:props') || '').split(' ') || [],
       html: this.innerHTML,
     };
 
