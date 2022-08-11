@@ -18,6 +18,8 @@ export default class HTMLTemplate extends HTMLElement {
           constructor() {
             super();
 
+            this.attachShadow({ mode: 'open' });
+
             let { html } = data;
 
             const dts = {} as any;
