@@ -10,6 +10,7 @@ export default class HTMLTemplate extends HTMLElement {
       props: (this.getprop('c:props') || '').split(' ') || [],
       html: this.innerHTML,
     };
+    console.log(data);
 
     try {
       customElements.define(
@@ -19,11 +20,12 @@ export default class HTMLTemplate extends HTMLElement {
             super();
 
             this.attachShadow({ mode: 'open' });
+          }
 
+          render() {
             let { html } = data;
 
             const dts = {} as any;
-
             data.props.forEach((prop) => {
               const value = this.getAttribute(`props:${prop}`);
               dts[prop] = value;
@@ -31,16 +33,21 @@ export default class HTMLTemplate extends HTMLElement {
 
             html = insertData(html, dts);
 
-            this.outerHTML = html;
+            this.shadowRoot.innerHTML = html;
+          }
+
+          connectedCallback() {
+            this.render();
+          }
+
+          attributeChangedCallback(name, oldValue, newValue) {
+            this.render();
           }
         }
       );
     } catch (e) {
       console.error(e);
     }
-
-    // Delete Self
-    this.outerHTML = '';
   }
 
   getprop(attribute: string) {
